@@ -2,7 +2,8 @@
 i = 0
 for letter in range(122, 96, -1):
     if i % 2 != 0:
-        print(chr(letter - 32), end="")
+        x = 32
     else:
-        print(chr(letter), end="")
+        x = 0
+    print("{0}".format(chr(letter - x)), end="")
     i += 1

@@ -8,5 +8,5 @@ def uppercase(str):
 
         upper += char
         i += 1
-    print(upper)
+    print("{0}".format(upper))
     return(0)

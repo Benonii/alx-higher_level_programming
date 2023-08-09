@@ -4,7 +4,8 @@ for i in range(0, 9):
         if i >= j:
             continue
         else:
-            print("{0}{1}".format(i, j), end=", ")
-
             if i == 8 and j == 9:
-                print(f"{i}{j}")
+                end = "\n"
+            else:
+                end = ", "
+            print("{0}{1}".format(i, j), end=end)

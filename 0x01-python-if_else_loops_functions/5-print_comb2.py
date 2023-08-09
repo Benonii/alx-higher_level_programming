@@ -4,6 +4,6 @@ for i in range(0, 100):
         print("0{0}".format(i), end=", ")
     else:
         if i == 99:
-            print(i)
+            print("{0}".format(i))
         else:
             print(i, end=", ")

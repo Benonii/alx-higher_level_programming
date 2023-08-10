@@ -12,4 +12,4 @@ if __name__ == "__main__":
         else:
             print(f"{ac - 1} arguments:")
             for i in range(1, ac):
-                print(f"{i} : {av[i]}")
+                print(f"{i}: {av[i]}")

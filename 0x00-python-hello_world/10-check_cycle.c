@@ -4,14 +4,14 @@
 
 /**
  * check_cycle - checks for a cyclr in a singly linked list
- * @list - The singly linked list to be checked
+ * @list: The singly linked list to be checked
  *
  * Return: 0 if there is no cycle, 1 if there is a cycle
  */
 
 int check_cycle(listint_t *list)
 {
-	listint_t *nodes[20] = {NULL},*current, *next;
+	listint_t *nodes[20] = {NULL}, *current = NULL, *next = NULL;
 	int i = 0, j;
 
 	current = list;

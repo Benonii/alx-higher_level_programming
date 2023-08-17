@@ -17,11 +17,11 @@ def roman_to_int(roman_string):
             'M': 100
             }
     number = 0
-    for i in range (0, len(roman_string)):
-        if roman_string[i] == 'V' and roman_string[i -1] == 'I':
-            number += Roman['IV']
+    for i in range(0, len(roman_string)):
+        if roman_string[i] == 'V' and roman_string[i - 1] == 'I':
+            number += Roman['IV'] + 1
         elif roman_string[i] == 'X' and roman_string[i - 1] == 'I':
-            number += Roman['IX']
+            number += Roman['IX'] - 1
         else:
             number += Roman[roman_string[i]]
     return number

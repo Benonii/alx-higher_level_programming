@@ -9,7 +9,7 @@ def roman_to_int(roman_string):
             'VI': 6,
             'VII': 7,
             'VIII': 8,
-            'XI': 9,
+            'IX': 9,
             'X': 10,
             'L': 50,
             'C': 100,
@@ -18,9 +18,9 @@ def roman_to_int(roman_string):
             }
     number = 0
     for i in range (0, len(roman_string)):
-        if roman_string[i] == 'I' and roman_string[i + 1] == 'V':
+        if roman_string[i] == 'V' and roman_string[i -1] == 'I':
             number += Roman['IV']
-        elif roman_string[i] == 'I' and roman_string[i + 1] == 'X':
+        elif roman_string[i] == 'X' and roman_string[i - 1] == 'I':
             number += Roman['IX']
         else:
             number += Roman[roman_string[i]]

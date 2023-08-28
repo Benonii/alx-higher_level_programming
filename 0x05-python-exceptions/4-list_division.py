@@ -10,7 +10,7 @@ def list_division(my_list_1, my_list_2, list_length):
                     raise ZeroDivisionError
                     continue
                 elif isinstance(my_list_1[i], int) and\
-                 isinstance(my_list_2[i], int):
+                isinstance(my_list_2[i], int):
                     result.append(my_list_1[i] / my_list_2[i])
                 else:
                     raise TypeError

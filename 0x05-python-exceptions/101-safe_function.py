@@ -2,8 +2,10 @@
 
 import sys
 
+
 def safe_function(fct, *args):
-	try:
-		return(fct(*args))
-	except:
-		sys.perror("exception: ")
+        
+        try:
+                return(fct(*args))
+        except Exception:
+                sys.perror("exception: ")

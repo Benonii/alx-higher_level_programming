@@ -2,6 +2,7 @@
 
 import sys
 
+
 def safe_print_integer_err(value):
     try:
         if isinstance(value, int):

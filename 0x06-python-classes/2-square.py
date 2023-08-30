@@ -4,6 +4,7 @@
 This module defines a simple Square class.
 '''
 
+
 class Square:
     '''
     A class representing a square with a positive integer size attribute.
@@ -18,7 +19,8 @@ class Square:
             Initializes a new Square instance.
 
             Args:
-                size (int): The size of the square's side length. Defaults to 0.
+                size (int): The size of the square's side length.
+                Defaults to 0.
 
             Raises:
                 TypeError: If the provided size is not an integer.

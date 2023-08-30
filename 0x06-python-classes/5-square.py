@@ -10,7 +10,6 @@ class Square:
         my_print: a method that prints the square using '#'
     '''
 
-
     def __init__(self, size=0):
         self.__size = size
 

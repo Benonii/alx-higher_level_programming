@@ -7,7 +7,6 @@ class Square:
         size: a positive integer that represents the length oof the square
     '''
 
-
     try:
         def __init__(self, size=0):
             if isinstance(size, int):

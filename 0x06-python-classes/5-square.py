@@ -1,6 +1,15 @@
 #!/usr/bin/python3
 
 class Square:
+''' This is the same as 4-square.py EXCEPT
+*It has the method that prints a square using '#'
+
+Attributes:
+    size: a private field that holds a positive integer
+    area: a method that calculates the area of the square
+    my_print: a method that prints the square using '#'
+'''
+
     def __init__(self, size=0):
         self.__size = size
 

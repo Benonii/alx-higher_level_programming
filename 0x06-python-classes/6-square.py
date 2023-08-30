@@ -1,6 +1,17 @@
 #!/usr/bin/python3
 
 class Square:
+''' This does the same thing as 5-sqaure.py EXCEPT
+*it adds whitespace to the beginnign of the printed square
+ based on position[0]
+
+Attributes:
+    size: A private filed that holds a positive integer
+    area: A method tha calculates the area of the square
+    my_print: prints a sqaure using #
+    position: a private field that holda a tuple of two positive integers
+'''
+
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position

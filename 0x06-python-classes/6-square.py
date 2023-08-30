@@ -1,14 +1,5 @@
 #!/usr/bin/python3
 
-    '''
-    A class representing a square with methods to access and set its size, position, calculate its area,
-    and print it using '#'.
-
-    Attributes:
-        __size (int): A private field containing a positive integer that represents the length of the square's side.
-        __position (tuple): A private field containing a tuple of 2 positive integers representing the position.
-    '''
-
 class Square:
     '''
     A class representing a square with methods to access and set its size, position, calculate its area,
@@ -78,5 +69,42 @@ class Square:
     @position.setter
     def position(self, value):
         '''
-        Set the position of the square
+        Set the position of the square.
+
+        Args:
+            value (tuple): The position to set for the square.
+
+        Raises:
+            TypeError: If the provided position is not a tuple of 2 positive integers.
+        '''
+        if isinstance(value[0], int) and isinstance(value[1], int):
+            if value[0] > 0 and value[1] > 0:
+                self.__position = value
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
+
+    def area(self):
+        '''
+        Calculate the area of the square.
+
+        Returns:
+            int: The area of the square.
+        '''
+        return self.__size ** 2
+
+    def my_print(self):
+        '''
+        Print the square using '#'.
+
+        If the square has no size, it prints an empty line.
+        '''
+        for height in range(0, self.__size):
+            print(" " * self.__position[0], end="")
+            for width in range(0, self.__size):
+                print("#", end="")
+            print("")
+        if self.__size == 0:
+            print("")
 

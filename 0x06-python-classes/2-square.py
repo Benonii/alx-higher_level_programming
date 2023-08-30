@@ -37,4 +37,3 @@ class Square:
         print(te)
     except ValueError as ve:
         print(ve)
-

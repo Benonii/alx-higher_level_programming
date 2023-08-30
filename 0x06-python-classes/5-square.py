@@ -12,7 +12,8 @@ class Square:
     calculate its area, and print it using '#'.
 
     Attributes:
-        __size (int): A private field containing a positive integer that represents the length of the square.
+        __size (int): A private field containing a positive integer that
+        represents the length of the square.
     '''
 
     def __init__(self, size=0):

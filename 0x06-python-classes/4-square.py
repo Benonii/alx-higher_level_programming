@@ -4,7 +4,8 @@
 A class representing a square with methods to access and set its size.
 
 Attributes:
-    __size (int): A private field containing a positive integer that represents the length of the square.
+    __size (int): A private field containing a positive integer that
+    represents the length of the square.
 '''
 
 
@@ -13,7 +14,8 @@ class Square:
     A class representing a square with methods to access and set its size.
 
     Attributes:
-        __size (int): A private field containing a positive integer that represents the length of the square.
+        __size (int): A private field containing a positive integer that
+        represents the length of the square.
     '''
 
     def __init__(self, size=0):
@@ -67,4 +69,3 @@ class Square:
             int: The area of the square.
         '''
         return self.__size ** 2
-

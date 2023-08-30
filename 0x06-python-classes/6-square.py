@@ -18,7 +18,7 @@ class Square:
         Initializes a new Square instance.
 
         Args:
-            size (int): The size of the square's side length. 
+            size (int): The size of the square's side length.
             Defaults to 0.
             position (tuple): The position of the square.\
             Defaults to (0, 0).
@@ -88,7 +88,8 @@ class Square:
             if value[0] > 0 and value[1] > 0:
                 self.__position = value
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError("position must be a tuple of 2 positive\
+                 integers")
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 

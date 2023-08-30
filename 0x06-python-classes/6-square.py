@@ -12,7 +12,6 @@ class Square:
         position: a private field that holda a tuple of two positive integers
     '''
 
-
     def __init__(self, size=0, position=(0, 0)):
         self.__size = size
         self.__position = position

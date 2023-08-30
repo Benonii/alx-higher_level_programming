@@ -8,7 +8,6 @@ class Square:
         area: A method that calculates the area of the square
     '''
 
-
     try:
         def __init__(self, size=0):
             if isinstance(size, int):

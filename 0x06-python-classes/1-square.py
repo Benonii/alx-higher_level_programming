@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 class Square:
-''' a class that initalizes an empty variable size '''
+    ''' a class that initalizes an empty variable size '''
+
 
     def __init__(self, size=0):
         self.__size = size

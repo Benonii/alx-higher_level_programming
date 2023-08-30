@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 
 class Square:
-''' This class has the attribute size.
+    ''' This class has the attribute size.
 
-Attributes:
-    size: a positive integer that represents the length oof the square
-'''
+    Attributes:
+        size: a positive integer that represents the length oof the square
+    '''
+
 
     try:
         def __init__(self, size=0):

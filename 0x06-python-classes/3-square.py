@@ -4,12 +4,14 @@
 This module defines a simple Square class.
 '''
 
+
 class Square:
     '''
     A class that represents a square and calculates its area.
 
     Attributes:
-        size (int): A positive integer that represents the length of a square side.
+        size (int): A positive integer that represents the length of a
+        square side.
     '''
 
     try:
@@ -18,7 +20,8 @@ class Square:
             Initializes a new Square instance.
 
             Args:
-                size (int): The size of the square's side length. Defaults to 0.
+                size (int): The size of the square's side length.
+                Defaults to 0.
 
             Raises:
                 TypeError: If the provided size is not an integer.
@@ -44,4 +47,3 @@ class Square:
         print("size must be an integer")
     except ValueError:
         print("size must be >= 0")
-

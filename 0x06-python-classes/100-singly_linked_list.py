@@ -67,4 +67,4 @@ class SinglyLinkedList:
     def print_list(self, head):
     ''' prints the list '''
         for i in head:
-            print("{}".format(head[i]))     
+            print("{}".format(head[i]))    

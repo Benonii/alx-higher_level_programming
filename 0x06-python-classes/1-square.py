@@ -1,10 +1,18 @@
 #!/usr/bin/python3
 
 class Square:
-    ''' a class that initalizes an empty variable size '''
+    '''
+    A class that represents a square.
+
+    Attributes:
+        __size (int): The size of the square's side length.
+    '''
 
     def __init__(self, size=0):
-       '''This function initializes the private field size
-          and assignes it to the inputted numebr
         '''
-       self.__size = size
+        Initializes a new Square instance.
+
+        Args:
+            size (int): The size of the square's side length. Defaults to 0.
+        '''
+        self.__size = size

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
 
 '''
-    A class representing a square with methods to access and set its size, calculate its area, and print it using '#'.
+    A class representing a square with methods to access and set its size,
+    calculate its area, and print it using '#'.
 '''
+
 
 class Square:
     '''
-    A class representing a square with methods to access and set its size, calculate its area, and print it using '#'.
+    A class representing a square with methods to access and set its size,
+    calculate its area, and print it using '#'.
 
     Attributes:
         __size (int): A private field containing a positive integer that represents the length of the square.

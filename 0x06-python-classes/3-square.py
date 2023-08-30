@@ -10,6 +10,7 @@ class Square:
                     self.__size = size
             else:
                 raise TypeError
+
         def area(self):
             return self.__size ** 2
     except TypeError:

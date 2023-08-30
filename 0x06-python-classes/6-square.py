@@ -2,12 +2,15 @@
 
 class Square:
     '''
-    A class representing a square with methods to access and set its size, position, calculate its area,
+    A class representing a square with methods to access and set its size,
+    position, calculate its area,
     and print it using '#'.
 
     Attributes:
-        __size (int): A private field containing a positive integer that represents the length of the square's side.
-        __position (tuple): A private field containing a tuple of 2 positive integers representing the position.
+        __size (int): A private field containing a positive integer that\
+        represents the length of the square's side.
+        __position (tuple): A private field containing a tuple of 2 positive\
+        integers representing the position.
     '''
 
     def __init__(self, size=0, position=(0, 0)):
@@ -15,13 +18,16 @@ class Square:
         Initializes a new Square instance.
 
         Args:
-            size (int): The size of the square's side length. Defaults to 0.
-            position (tuple): The position of the square. Defaults to (0, 0).
+            size (int): The size of the square's side length. 
+            Defaults to 0.
+            position (tuple): The position of the square.\
+            Defaults to (0, 0).
 
         Raises:
             ValueError: If the provided size is negative.
             TypeError: If the provided size is not an integer.
-            TypeError: If the provided position is not a tuple of 2 positive integers.
+            TypeError: If the provided position is not a tuple
+            of 2 positive integers.
         '''
         self.__size = size
         self.__position = position
@@ -75,7 +81,8 @@ class Square:
             value (tuple): The position to set for the square.
 
         Raises:
-            TypeError: If the provided position is not a tuple of 2 positive integers.
+            TypeError: If the provided position is not a tuple of 2 positive
+            integers.
         '''
         if isinstance(value[0], int) and isinstance(value[1], int):
             if value[0] > 0 and value[1] > 0:
@@ -107,4 +114,3 @@ class Square:
             print("")
         if self.__size == 0:
             print("")
-

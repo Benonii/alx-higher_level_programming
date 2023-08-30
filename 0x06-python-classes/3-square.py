@@ -1,12 +1,13 @@
 #!/usr/bin/python3
 
 class Square:
-''' This class takes in the length of a square and calculates the area.
+    ''' This class takes in the length of a square and calculates the area.
 
-Attributes:
-    size:A positive integer that represents the length of a square
-    area: A method that calculates the area of the square
-'''
+    Attributes:
+        size:A positive integer that represents the length of a square
+        area: A method that calculates the area of the square
+    '''
+
 
     try:
         def __init__(self, size=0):

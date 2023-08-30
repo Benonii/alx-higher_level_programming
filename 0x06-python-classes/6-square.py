@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+'''
+A square class that takes in the length, calculates the area,
+prints the square using '#' and adds whitespace * position[0]
+to the squares
+'''
 
 class Square:
     '''

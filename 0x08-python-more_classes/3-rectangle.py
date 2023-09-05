@@ -54,15 +54,16 @@ class Rectangle:
         ''' calculates the perimeter of the rectangle '''
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self__width + self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         ''' returns a rectangle made up of ``#`` '''
         rectangle = ""
         if self.__width == 0 or self.__height == 0:
-            return rectangle
-        for i in range(self.__hegiht):
-            for j in range(self.__width):
-                rectangle += rectangle + "#"
-            rectangle += rectangle + "\n"
+            return None
+        for height in range(0, self.__height):
+            for width in range(0, self.__width):
+                rectangle += "#"
+            if height != self.__height - 1:
+                rectangle += "\n"
         return rectangle

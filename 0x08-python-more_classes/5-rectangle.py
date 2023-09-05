@@ -76,4 +76,4 @@ class Rectangle:
 
     def __del__(self):
         ''' is called when an instance is deleted '''
-        print("Bye Rectangle...")
+        print("Bye rectangle" + "...")

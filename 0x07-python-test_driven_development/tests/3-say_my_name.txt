@@ -1,0 +1,36 @@
+#say_my_name.txt
+
+This doctest is for the function say_my_name()
+
+It takes first_name and last_name(optional) and prints: ``My name is {first_name} {last_name}``
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+	>>> say_my_name("John", "Smith")
+	My name is John Smith
+	>>> say_my_name("Bob")
+	My name is Bob 
+
+If either first_name or last_name aren't isn't a string, it raises a TypeError, or a NameError
+	>>> say_my_name("Bob", 1)
+	Traceback (most recent call last):
+	  ...
+	TypeError: last_name must be a string
+	>>> say_my_name(1, "Dylan")
+	Traceback (most recent call last):
+	  ...
+	TypeError: first_name must be a string
+	>>> say_my_name(a, b)
+	Traceback (most recent call last):
+	  ...
+	NameError: name 'a' is not defined
+
+Inputting symbols is invalid syntax
+	>>> say_my_name(@, "Smith")
+	Traceback (most recent call last):
+	   ...
+	SyntaxError: invalid syntax
+
+An empty call to say_my_name will cause a TypeError
+	>>> say_my_name()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'

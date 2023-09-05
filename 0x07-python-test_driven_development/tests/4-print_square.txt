@@ -1,0 +1,37 @@
+#4-print_square.py
+
+This doctest is for the function print_square().
+
+It prints a square with the area of size ** 2 by using the ``#`` character
+	>>> print_square = __import__('4-print_square').print_square
+	>>> print_square(4)
+	####
+	####
+	####
+	####
+	>>> print_square(1)
+	#
+	>>> print_square(0)
+	<BLANKLINE>
+
+If size is not an integer, a TypeError or a NameError is raise
+	>>> print_square('a')
+	Traceback (most recent call last):
+	  ...
+	TypeError: size must be an integer
+	>>> print_square(a)
+	Traceback (most recent call last):
+	  ...
+	NameError: name 'a' is not defined
+
+If a symbol is given, a syntax error is raised
+	>>> print_square(@)
+	Traceback (most recent call last):
+	   ...
+	SyntaxError: invalid syntax
+
+If nothing is passed to the function, a TypeError is raised
+	>>> print_square()
+	Traceback (most recent call last):
+	  ...
+	TypeError: print_square() missing 1 required positional argument: 'size'

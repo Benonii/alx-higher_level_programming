@@ -1,0 +1,29 @@
+#5-text_indentation
+
+This is a test for the function text_indentation().
+
+This function takes in a text and adds 2 newlines everytime the characters '.' '?' or ':' are encountered.
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation("Hi. How Are you? Your name is: (insert your name)")
+Hi.
+<BLANKLINE>
+How Are you?
+<BLANKLINE>
+Your name is:
+<BLANKLINE>
+(insert your name)
+
+Hi, how are you, insert your name here>>>
+>>> text_indentation(5)
+>>> text_indentation(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'a' is not defined
+>>> text_indentation("Hey Rachel. How you doin'? I'm doin' good baby how u doin: ")
+Hey Rachel.
+<BLANKLINE>
+How you doin'?
+<BLANKLINE>
+I'm doin' good baby how u doin:
+<BLANKLINE>

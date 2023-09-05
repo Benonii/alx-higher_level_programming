@@ -1,0 +1,62 @@
+#2-matrix_divided.txt
+
+This is a doctest for the function matrix_divided
+
+matrix divided takes in a matrix and divides it by a number div.
+It returns a matrix with the quotients rounded to two digits.
+	>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+	>>> matrix = [[1, 2, 3], [5, 6, 7]]
+	>>> matrix_divided(matrix, 3)
+	[[0.33, 0.67, 1.0], [1.67, 2.0, 2.33]]
+	>>> matrix_divided(matrix, -3)
+	[[-0.33, -0.67, -1.0], [-1.67, -2.0, -2.33]]
+
+The result is a new matrix and the original matrix is untouched.
+	>>> print(matrix)
+	[[1, 2, 3], [5, 6, 7]]
+
+If div is not a number, a TypeError is raised
+	>>> matrix_divided(matrix, 'a')
+	Traceback (most recent call last):
+	  ...
+	TypeError: div must be a number
+
+If div is zero, a ZeroDivisionError is raised
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	  ...
+	ZeroDivisionError: division by zero
+
+If the wrong numebr of arugments is passed, a Type Error is raised
+	>>> matrix_divided(matrix)
+	Traceback (most recent call last):
+	  ...  
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+	>>> matrix_divided()
+	Traceback (most recent call last):
+	  ...
+	TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+	>>> matrix_divided(3)
+	Traceback (most recent call last):
+	  ...
+	TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+If there is a non digit element to the matrix a TypeError or a NameError is raised.
+
+	>>> matrix = [[1, 'a', 3], [4, 5, 6]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	  ...
+	TypeError: matrix must be a matrix (list of list) of integers/floats
+	>>> matrix = [[1, 2, 3], [a, 5, 6]]
+	Traceback (most recent call last):
+	  ...
+	NameError: name 'a' is not defined
+
+If matrix is empty, a ValueError is raised
+	>>> matrix=[]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	  ...
+	ValueError: matrix can not be empty

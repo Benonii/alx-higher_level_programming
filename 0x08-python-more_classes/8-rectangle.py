@@ -16,7 +16,7 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -58,28 +58,29 @@ class Rectangle:
         ''' calculates the perimeter of the rectangle '''
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self__width + self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         ''' returns a rectangle made up of ``#`` '''
         rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return rectangle
-        for i in range(self.__hegiht):
-            for j in range(self.__width):
-                rectangle += rectangle + print_symbol
-            rectangle += rectangle + "\n"
+        for height in range(self.__height):
+            for width in range(self.__width):
+                rectangle += "{}".format(Rectangle.print_symbol)
+            if height != str.__height - 1:
+                rectangle += "\n"
         return rectangle
 
     def __repr__(self):
         ''' returns a replicable string representation of a rectangle '''
-        rectangle = 'Rectangle(' + str(self.__width) + ',' str(self.__height)\
+        rectangle = 'Rectangle(' + str(self.__width) + ',' + str(self.__height)\
                     + ')'
         return rectangle
 
     def __del__(self):
         ''' is called when an instance is deleted '''
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye Rectangle...")
 
     @staticmethod
@@ -93,7 +94,7 @@ class Rectangle:
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
 
-        if rect_1.area(rect_1) >= rect_2.area(rect_2):
+        if rect_1.area() >= rect_2.area():
             return rect_1
         else:
             return rect_2

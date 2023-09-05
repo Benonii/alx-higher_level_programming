@@ -60,7 +60,7 @@ class Rectangle:
         ''' returns a rectangle made up of ``#`` '''
         rectangle = ""
         if self.__width == 0 or self.__height == 0:
-            return None
+            return rectangle
         for height in range(0, self.__height):
             for width in range(0, self.__width):
                 rectangle += "#"

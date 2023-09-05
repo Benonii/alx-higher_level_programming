@@ -3,7 +3,7 @@
 class Rectangle:
     ''' This class defines the width and height of a rectangle '''
 
-    def __init__(Self, width=0, height=0):
+    def __init__(self, width=0, height=0):
         '''
         This function provides an alternate instantization with
         private attributes width and height

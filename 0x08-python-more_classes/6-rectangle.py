@@ -12,7 +12,7 @@ class Rectangle:
 
         self.__width = width
         self.__height = height
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -54,26 +54,27 @@ class Rectangle:
         ''' calculates the perimeter of the rectangle '''
         if self.__width == 0 or self.__height == 0:
             return 0
-        return 2 * (self__width + self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
         ''' returns a rectangle made up of ``#`` '''
         rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return rectangle
-        for i in range(self.__hegiht):
-            for j in range(self.__width):
+        for height in range(self.__height):
+            for width in range(self.__width):
                 rectangle += rectangle + "#"
-            rectangle += rectangle + "\n"
+            if height != self.__height - 1:
+                rectangle += rectangle + "\n"
         return rectangle
 
     def __repr__(self):
         ''' returns a replicable string representation of a rectangle '''
-        rectangle = 'Rectangle(' + str(self.__width) + ',' str(self.__height)\
+        rectangle = 'Rectangle(' + str(self.__width) + ',' + str(self.__height)\
                     + ')'
         return rectangle
 
     def __del__(self):
         ''' is called when an instance is deleted '''
-        number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
         print("Bye Rectangle...")

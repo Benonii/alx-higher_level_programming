@@ -1,9 +1,13 @@
+#!/usr/bin/python3
+
 ''' This module contains the class Rectangle, and it isn't empty '''
+
 
 class Rectangle:
     ''' This class defines the width and height of a rectangle '''
 
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         '''
         This function provides an alternate instantization with
@@ -23,7 +27,7 @@ class Rectangle:
     def height(self):
         ''' height getter '''
         return self.__height
-        
+
     @width.setter
     def width(self, value):
         ''' width setter '''
@@ -45,11 +49,11 @@ class Rectangle:
                 raise ValueError("height must be >= 0")
         else:
             raise TypeError("height must be an integer")
-            
+
     def area(self):
         ''' calculates the area of the rectangle '''
         return self.__width * self.__height
-        
+
     def perimeter(self):
         ''' calculates the perimeter of the rectangle '''
         if self.__width == 0 or self.__height == 0:
@@ -63,15 +67,15 @@ class Rectangle:
             return rectangle
         for height in range(self.__height):
             for width in range(self.__width):
-                rectangle += rectangle + "#"
+                rectangle += "#"
             if height != self.__height - 1:
-                rectangle += rectangle + "\n"
+                rectangle += "\n"
         return rectangle
 
     def __repr__(self):
         ''' returns a replicable string representation of a rectangle '''
-        rectangle = 'Rectangle(' + str(self.__width) + ',' + str(self.__height)\
-                    + ')'
+        rectangle = 'Rectangle(' + str(self.__width) + ',' + \
+                    str(self.__height) + ')'
         return rectangle
 
     def __del__(self):

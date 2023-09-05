@@ -1,4 +1,7 @@
+#!/usr/bin/python3
+
 ''' This module contains the class Rectangle, and it isn't empty '''
+
 
 class Rectangle:
     ''' This class defines the width and height of a rectangle '''
@@ -20,7 +23,6 @@ class Rectangle:
     def height(self):
         ''' height getter '''
         return self.__height
-        
 
     @width.setter
     def width(self, value):
@@ -68,6 +70,6 @@ class Rectangle:
 
     def __repr__(self):
         ''' returns a replicable string representation of a rectangle '''
-        rectangle = 'Rectangle(' + str(self.__width) + ',' + str(self.__height)\
-                    + ')'
+        rectangle = 'Rectangle(' + str(self.__width) + ','\
+                    + str(self.__height) + ')'
         return rectangle

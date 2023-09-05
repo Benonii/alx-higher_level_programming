@@ -82,4 +82,4 @@ class Rectangle:
     def __del__(self):
         ''' is called when an instance is deleted '''
         Rectangle.number_of_instances -= 1
-        print("Bye Rectangle...")
+        print("Bye Rectangle" + "...")

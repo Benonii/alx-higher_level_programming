@@ -2,9 +2,12 @@
 
 ''' This module has the function text_indentation '''
 
+
 def text_indentation(text):
     '''
-    adds two blanklines aftersfter the characters ``.``, ``?`` or ``:``
+    adds two blanklines aftersfter the characters:
+    ``.``, ``?`` or ``:``
+
     '''
 
     if isinstance(text, str):

@@ -5,6 +5,7 @@ This module has the function say_my_name that prints a formatted string
 with inputted first and last names
 '''
 
+
 def say_my_name(first_name, last_name=""):
     '''
     prints My name is <first name> <last name>

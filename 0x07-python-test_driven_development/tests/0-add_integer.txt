@@ -38,7 +38,7 @@ If either a or b aren't an ints or float, a TypeError is raised
 	>>> add_integer(None)
 	Traceback (most recent call last):
 	  ...
-	TypeError: a must be an integer
+	TypeError: a and b must be integers
 	>>> add_integer()
 	Traceback (most recent call last):
 	  ...

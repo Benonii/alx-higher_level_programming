@@ -6,8 +6,9 @@ This module contains the function print_square.
 It prints a square using ``#``
 '''
 
+
 def print_square(size):
-    ''' 
+    '''
     This fucntion prints a sqaure that has an area of size ** 2
     using  ``#``
     '''

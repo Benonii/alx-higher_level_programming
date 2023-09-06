@@ -5,6 +5,7 @@ This module contains the function matrix_divided that divides each element
 of a matrix bu a numebr
 '''
 
+
 def matrix_divided(matrix, div):
     '''
     This function divides each element of matrix by div
@@ -34,8 +35,7 @@ def matrix_divided(matrix, div):
             for row in matrix:
                 for i in row:
                     if not isinstance(i, (int, float)):
-                        raise TypeError(\
-                                "matrix must be a matrix (list of list) of integers/floats")
+                        raise TypeError("matrix must be a matrix (list of list) of integers/floats")
             for row in matrix:
                 new_row = [round(number / div, 2) for number in row]
                 divided_matrix.append(new_row)

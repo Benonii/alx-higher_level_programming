@@ -7,4 +7,5 @@ import json
 
 
 def from_json_string(my_str):
+    ''' creates an object out of a json string '''
     return json.loads(my_str)

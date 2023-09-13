@@ -2,6 +2,7 @@
 
 ''' This module contains the class Student '''
 
+
 class Student:
     ''' Student class. Has the following public attributes:
         first_name, last_name, age '''
@@ -42,4 +43,4 @@ class Student:
 
         for key, value in json.items():
             if hasattr(self, key):
-                setattr(self, key, value) 
+                setattr(self, key, value)

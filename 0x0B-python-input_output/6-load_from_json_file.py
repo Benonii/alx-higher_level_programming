@@ -3,9 +3,9 @@
 ''' This module contains the function load_from_json_file
 '''
 
-
 import json
 import os
+
 
 def load_from_json_file(filename):
     ''' loads an object from a json file.

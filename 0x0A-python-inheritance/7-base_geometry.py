@@ -19,7 +19,7 @@ class BaseGeometry:
             Weather value is grater than or equal to 0
         '''
 
-        if not isinstance(value, int):
+        if not type(value) is int:
             raise TypeError("{} must be an integer".format(name))
 
         if value <= 0:

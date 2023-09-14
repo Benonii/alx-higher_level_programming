@@ -22,3 +22,11 @@ The function print_sorted printes a sorted copy of the list.
 The original list is untouched by the call to print_sorted.
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
+
+	>>> my_list.append(-4)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5, -4]
+	>>> my_list.append()
+	Traceback (most recent call last):
+	  ...
+	TypeError: append() takes exactly one argument (0 given)

@@ -23,19 +23,20 @@ The original list is untouched by the call to print_sorted.
 	>>> print(my_list)
 	[1, 4, 2, 3, 5]
 
-This also works fine with negative numbers
-	>>> my_list.print_sorted()
-	[-4, 1, 2, 3, 4, 5]
-
+This also works fine with negative numbers.
 	>>> my_list.append(-4)
 	>>> print(my_list)
 	[1, 4, 2, 3, 5, -4]
+        >>> my_list.print_sorted()
+        [-4, 1, 2, 3, 4, 5]
+
 
 	>>> my_list.append()
 	Traceback (most recent call last):
 	  ...
 	TypeError: append() takes exactly one argument (0 given)
 
-It also works fine with empyt strings
+It also works fine with empyt lists.
+        >>> my_list = MyList()
 	>>> my_list.print_sorted()
 	[]

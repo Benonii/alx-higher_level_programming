@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 ''' This module contains the class rectangle that inherits the rectangle class
-from ``8-rectangle.py'' '''
+from ``8-rectangle.py`` '''
 
 BaseRectangle = __import__('8-rectangle').Rectangle
 

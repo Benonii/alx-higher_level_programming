@@ -1,0 +1,38 @@
+#7-base_geometry.txt
+
+This is a doctest for the class BaseGeometry.
+
+This class defines an integer_validator function.
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("my_int", 12)
+	>>> bg.integer_validator("width", 89)
+
+It returns an Exception if area is called. Since it's not implemented yet.
+	>>> bg.area()
+	Traceback (most recent call last):
+	  ...
+	Exception: area() is not implemented
+
+It returns a TypeError if the value is not an integer.
+	>>> try:
+	...     bg.integer_validator("name", "John")
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	... 
+	[TypeError] name must be an integer
+
+It returns a ValueError if the value is <= 0
+	>>> try:
+	...     bg.integer_validator("age", 0)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	... 
+	[ValueError] age must be greater than 0
+	>>> try:
+	...     bg.integer_validator("distance", -4)
+	... except Exception as e:
+	...     print("[{}] {}".format(e.__class__.__name__, e))
+	... 
+	[ValueError] distance must be greater than 0

@@ -1,0 +1,24 @@
+#my_list.txt
+
+This is doctest for the class print_sorted(self).
+
+MyList inherits from list and it is expected to contain integers only.
+
+It behaves exaclty like a list
+	>>> MyList = __import__('1-my_list').MyList
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(4)
+	>>> my_list.append(2)
+	>>> my_list.append(3)
+	>>> my_list.append(5)
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]
+
+The function print_sorted printes a sorted copy of the list.	
+	>>> my_list.print_sorted()
+	[1, 2, 3, 4, 5]
+
+The original list is untouched by the call to print_sorted.
+	>>> print(my_list)
+	[1, 4, 2, 3, 5]

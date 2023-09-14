@@ -36,3 +36,76 @@ It returns a ValueError if the value is <= 0
 	...     print("[{}] {}".format(e.__class__.__name__, e))
 	... 
 	[ValueError] distance must be greater than 0
+
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	  ...
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("age")
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator("age")
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+	>>> bg.integer_validator("age", 1)
+
+	>>> bg.integer_validator("age", 0)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 26, in integer_validator
+	    raise ValueError("{} must be greater than 0".format(name))
+	ValueError: age must be greater than 0
+
+	>>> bg.integer_validator("age", -4)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 26, in integer_validator
+	    raise ValueError("{} must be greater than 0".format(name))
+	ValueError: age must be greater than 0
+
+	>>> bg.integer_validator("age", (4,))
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 23, in integer_validator
+	    raise TypeError("{} must be an integer".format(name))
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator("age", "4")
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 23, in integer_validator
+	    raise TypeError("{} must be an integer".format(name))
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator("age", [3])
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 23, in integer_validator
+	    raise TypeError("{} must be an integer".format(name))
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator("age", True)
+
+	>>> bg.integer_validator("age", {3, 4})
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 23, in integer_validator
+	    raise TypeError("{} must be an integer".format(name))
+	TypeError: age must be an integer
+
+	>>> bg.integer_validator("age", None)
+	Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 23, in integer_validator
+	    raise TypeError("{} must be an integer".format(name))
+	TypeError: age must be an integer

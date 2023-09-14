@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 
-''' This module contains the class rectangle that inherits the rectangle class
-from ``8-rectangle.py`` '''
+''' This module contains the class rectangle that inherits the class BaseGeometry '''
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 

@@ -4,7 +4,7 @@
 '''
 
 
-def add_attribute(obj, name='', value=0):
+def add_attribute(obj, name, value):
     ''' sets value to attribute if it exists '''
 
     if hasattr(obj, name):

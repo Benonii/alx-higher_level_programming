@@ -10,6 +10,8 @@ class MyList(list):
 
     def __str__(self):
         ''' makes print() work '''
+
         return "{}".format(list(self))
+
     def print_sorted(self):
         print(sorted(self))

@@ -16,4 +16,5 @@ class Rectangle(BaseRectangle):
         return self.__width * self.__height
 
     def __str__(self):
+        ''' Makes print work '''
         return "[Rectangle] {}/{}".format(self.__width, self.__height)

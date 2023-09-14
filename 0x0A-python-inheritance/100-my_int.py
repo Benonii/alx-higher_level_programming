@@ -3,6 +3,7 @@
 ''' This module contains the class MyInt. It inhetirs from int.
     This class is a rebel for no cause. '''
 
+
 class MyInt(int):
     ''' Rebel class that has everything int has. Except ``==`` is ``!=``
         and viceversa. '''

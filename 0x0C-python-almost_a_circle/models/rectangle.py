@@ -13,12 +13,17 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         ''' Instantization '''
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.__width = None
+        self.__height = None
+        self.__x = None
+        self.__y = None
 
         super().__init__(id)
+
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):
@@ -44,7 +49,7 @@ class Rectangle(Base):
     def width(self, width):
         ''' width setter '''
 
-        if isinstance(width, int):
+        if type(width) is int:
             if width > 0:
                 self.__width = width
             else:
@@ -55,7 +60,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, height):
         ''' height setter '''
-        if isinstance(height, int):
+        if type(height) is int:
             if height > 0:
                 self.__height = height
             else:
@@ -78,7 +83,6 @@ class Rectangle(Base):
     @y.setter
     def y(self, y):
         ''' y setter '''
-
         if type(y) is int:
             if y >= 0:
                 self.__y = y

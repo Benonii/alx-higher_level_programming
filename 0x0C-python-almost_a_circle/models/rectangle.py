@@ -109,7 +109,7 @@ class Rectangle(Base):
             print("")
 
     def update(self, *args, **kwargs):
-
+        '''updates the attributes of an onject '''
         attributes = ["id", "width", "height", "x", "y"]
 
         if args:

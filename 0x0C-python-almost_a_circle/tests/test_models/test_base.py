@@ -10,20 +10,6 @@ from models.square import Square
 class TestBase(unittest.TestCase):
     '''hold test cases for ``base.py`` '''
 
-    def setUp(self):
-        ''' Set up '''
-        b1 = Base()
-        b2 = Base()
-        b3 = Base()
-        list_dictionary1 = []
-        r1 = Rectangle(10, 7, 2, 8)
-        dictionary = r1.to_dictionary()
-        json_dictionary = Base.to_json_string([dictionary])
-
-    def tearDown(self):
-        '''tear down '''
-        pass
-
     def test_id(self):
         ''' tests the id '''
         b1 = Base()

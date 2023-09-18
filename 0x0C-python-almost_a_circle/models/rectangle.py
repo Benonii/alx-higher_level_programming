@@ -20,11 +20,11 @@ class Rectangle(Base):
 
         super().__init__(id)
 
-        if not isinstance(height, int) or height <= 0:
-            raise TypeError("height must be an integer")
+        if not isinstance(height, int):
+            raise TypeError("height msut be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
 
-        if not isinstance(y, int) or y < 0:
-            raise ValueError("y must be a >= integer")
     @property
     def width(self):
         ''' width getter '''

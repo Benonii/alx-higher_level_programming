@@ -23,7 +23,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, size):
         ''' Size setter '''
-        if isinstance(size, int):
+        if type(size) is int:
             if size > 0:
                 self.width = size
                 self.height = size

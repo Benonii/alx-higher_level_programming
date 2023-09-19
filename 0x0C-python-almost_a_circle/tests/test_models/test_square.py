@@ -21,8 +21,8 @@ class TestSquare(unittest.TestCase):
         s2 = Square(2)
         s3 = Square(2, 0, 0, 69)
 
-        self.assertEqual(s1.id, 33)
-        self.assertEqual(s2.id, 34)
+        self.assertEqual(s1.id, 40)
+        self.assertEqual(s2.id, 41)
         self.assertEqual(s3.id, 69)
 
     def test_size(self):

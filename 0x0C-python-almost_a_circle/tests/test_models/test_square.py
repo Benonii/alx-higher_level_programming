@@ -17,7 +17,7 @@ class TestSquare(unittest.TestCase):
     def test_id(self):
         ''' Tests the id attribute '''
 
-        s1  = Square(1)
+        s1 = Square(1)
         s2 = Square(2)
         s3 = Square(2, 0, 0, 69)
 

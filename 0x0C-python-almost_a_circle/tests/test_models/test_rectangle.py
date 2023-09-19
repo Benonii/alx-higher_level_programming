@@ -9,9 +9,10 @@ from models.rectangle import Rectangle
 import sys
 import io
 
+
 class TestRectangle(unittest.TestCase):
     ''' A class for test cases for Rectangle '''
- 
+
     def setUp(self):
         ''' setup '''
 
@@ -62,13 +63,13 @@ class TestRectangle(unittest.TestCase):
         '''Tests exceptions related to the wrong type given to the width
            attribute of Rectangle. '''
 
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "width must be an integer") as e:
             r1 = Rectangle("5", 1)
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "width must be an integer") as e:
             r2 = Rectangle(None, 2)
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "width must be an integer") as e:
             r3 = Rectangle(True, 3)
 
@@ -85,13 +86,13 @@ class TestRectangle(unittest.TestCase):
         ''' Tests exceptions related to the wrong type given to the height
            attribute of Rectangle. '''
 
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "height must be an integer") as e:
             r1 = Rectangle(1, "5")
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "height must be an integer") as e:
             r2 = Rectangle(2, None)
-        with self.assertRaisesRegex(TypeError,\
+        with self.assertRaisesRegex(TypeError,
                                     "height must be an integer") as e:
             r3 = Rectangle(3, True)
 
@@ -118,7 +119,7 @@ class TestRectangle(unittest.TestCase):
     def test_x_value(self):
         ''' Tests exceptions related to values less than zero being assigned to
             the x attribute of Rectangle '''
-        
+
         with self.assertRaisesRegex(ValueError, "x must be >= 0") as e:
             r1 = Rectangle(1, 1, -4, 0)
 
@@ -139,7 +140,7 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "y must be >= 0") as e:
             r1 = Rectangle(1, 1, 0, -4)
-    
+
     def test_area(self):
         ''' tests if the area instance method of Rectangle returns the correct
             output. '''
@@ -149,7 +150,6 @@ class TestRectangle(unittest.TestCase):
 
         self.assertEqual(r1.area(), 6)
         self.assertEqual(r2.area(), 30)
-
 
     def test_display(self):
         ''' Test if the display instance method of Rectangle returns the
@@ -169,7 +169,7 @@ class TestRectangle(unittest.TestCase):
 
         r1 = Rectangle(4, 5, 2, 3, 1)
 
-        self.assertEqual(str(r1),\
+        self.assertEqual(str(r1),
                          "[Rectangle] (1) 2/3 - 4/5")
 
     def test_update_0(self):
@@ -177,7 +177,7 @@ class TestRectangle(unittest.TestCase):
 
         r1.update(69, 4, 5, 1, 1)
 
-        self.assertEqual(str(r1),\
+        self.assertEqual(str(r1),
                          "[Rectangle] (69) 1/1 - 4/5")
 
     def test_update_1(self):
@@ -190,10 +190,10 @@ class TestRectangle(unittest.TestCase):
                 "y": 2
                 }
         r1.update(**kwargs)
-        self.assertEqual(str(r1),\
+        self.assertEqual(str(r1),
                          "[Rectangle] (68) 2/2 - 3/4")
         r1.update(69, 4, 5, 1, 1, **kwargs)
-        self.assertEqual(str(r1),\
+        self.assertEqual(str(r1),
                          "[Rectangle] (69) 1/1 - 4/5")
 
         def test_to_dictionary(self):
@@ -203,11 +203,11 @@ class TestRectangle(unittest.TestCase):
 
             result = r1.to_dictionary()
             expected_dict = {
-            "id": 69,
-            "width": 10,
-            "height": 20,
-            "x": 1,
-            "y": 2
-            }
-            
+                        "id": 69,
+                        "width": 10,
+                        "height": 20,
+                        "x": 1,
+                        "y": 2
+                }
+
             self.assertEqual(result, expected_dict)

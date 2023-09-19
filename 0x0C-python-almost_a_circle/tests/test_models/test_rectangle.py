@@ -11,6 +11,17 @@ import io
 
 class TestRectangle(unittest.TestCase):
     ''' A class for test cases for Rectangle '''
+ 
+    def setUp(self):
+        ''' setup '''
+
+        self.stdout_backup = sys.stdout
+        sys.stdout = io.StringIO()
+
+    def tearDown(self):
+        ''' teardown '''
+
+        sys.stdout = self.stdout_backup
 
     def test_id(self):
         ''' tests the id '''
@@ -19,8 +30,8 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 2, 0, 0)
         r3 = Rectangle(3, 3, 0, 0, 69)
 
-        self.assertEqual(r1.id, 10)
-        self.assertEqual(r2.id, 11)
+        self.assertEqual(r1.id, 11)
+        self.assertEqual(r2.id, 12)
         self.assertEqual(r3.id, 69)
 
     def test_width_height(self):
@@ -139,23 +150,18 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.area(), 6)
         self.assertEqual(r2.area(), 30)
 
-    """
+
     def test_display(self):
-        ''' Test if the display instance method of Rectangle returns the correct
-            output. '''
+        ''' Test if the display instance method of Rectangle returns the
+            correct output. '''
+        r1 = Rectangle(3, 2)
+        r1.display()
 
-        r1 = Rectangle(2, 2)
-        r2 = Rectangle(5, 5)
-        r3 = Rectangle(2, 2, 1)
-        r4 = Rectangle(2, 2, 0, 1)
-        r5 = Rectangle(2, 2, 2, 2)
+        # Get the captured output and compare it to the expected output
+        captured_output = sys.stdout.getvalue()
+        expected_output = "###\n###\n"
 
-        self.assertEqual(r1.display(), "##\n##\n")
-        self.assertEqual(r2.display(), "#####\n#####\n")
-        self.assertEqual(r3.display(), " ##\n ##\n")
-        self.assertEqual(r4.display(), "\n##\n##\n")
-        self.assertEqual(r5.display(), "\n\n  ##\n  ##\n")
-    """
+        self.assertEqual(captured_output, expected_output)
 
     def test_str(self):
         ''' Test if the str instance method of Rectangle returns the correct

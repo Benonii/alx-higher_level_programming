@@ -195,3 +195,19 @@ class TestRectangle(unittest.TestCase):
         r1.update(69, 4, 5, 1, 1, **kwargs)
         self.assertEqual(str(r1),\
                          "[Rectangle] (69) 1/1 - 4/5")
+
+        def test_to_dictionary(self):
+            '''Tests the to_dictionary instance method of the Rectangle class.
+            '''
+            r1 = Rectangle(10, 20, 1, 2, 69)
+
+            result = r1.to_dictionary()
+            expected_dict = {
+            "id": 69,
+            "width": 10,
+            "height": 20,
+            "x": 1,
+            "y": 2
+            }
+            
+            self.assertEqual(result, expected_dict)

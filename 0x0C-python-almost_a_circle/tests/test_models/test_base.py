@@ -19,7 +19,9 @@ class TestBase(unittest.TestCase):
         """
         if os.path.exists("Rectangle.json"):
             os.remove("Rectangle.json")
-    
+        if os.path.exists("Square.json"):
+            os.remove("Square.json")
+
     def test_id(self):
         ''' tests the id '''
         b1 = Base()
@@ -68,11 +70,11 @@ class TestBase(unittest.TestCase):
 
         - Save the list of rectangles to a file.
         - Check if the file "Rectangle.json" has been created.
-        - Read the contents of the file and verify that it contains the expected JSON data.
+        - Read the contents of the file and verify that it contains the
+          expected JSON data.
         """
         self.r1 = Rectangle(10, 7, 2, 8)
         self.r2 = Rectangle(2, 4)
-
 
         # Save the list of rectangles to a file
         Rectangle.save_to_file([self.r1, self.r2])
@@ -87,7 +89,7 @@ class TestBase(unittest.TestCase):
         # Verify that the file contains the expected JSON data
         expected_json = (
                 '[{"id": 8, "width": 10, "height": 7, "x": 2, "y": 8}, '
-                '{"id": 9, "width": 2, "height": 4, "x": 0, "y": 0}]' )
+                '{"id": 9, "width": 2, "height": 4, "x": 0, "y": 0}]')
         self.assertEqual(file_contents, expected_json)
 
         def test_from_json_string_empty_string(self):
@@ -121,7 +123,8 @@ class TestBase(unittest.TestCase):
         Test the load_from_file method.
 
         - Ensure that it returns a list of instances.
-        - Verify that the returned list contains the correct number of instances.
+        - Verify that the returned list contains the correct number of
+          instances
         - Verify that the instances in the list have the correct attributes.
         """
 

@@ -30,8 +30,8 @@ class TestRectangle(unittest.TestCase):
         r2 = Rectangle(2, 2, 0, 0)
         r3 = Rectangle(3, 3, 0, 0, 69)
 
-        self.assertEqual(r1.id, 11)
-        self.assertEqual(r2.id, 12)
+        self.assertEqual(r1.id, 18)
+        self.assertEqual(r2.id, 19)
         self.assertEqual(r3.id, 69)
 
     def test_width_height(self):

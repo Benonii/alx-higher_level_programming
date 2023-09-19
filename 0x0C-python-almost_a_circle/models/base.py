@@ -60,7 +60,7 @@ class Base:
     def create(cls, **dictionary):
         '''returns an instance with all the attributes already set '''
 
-        instance = cls(0, 0, 0, 0)
+        instance = cls(1, 1)
         cls.update(instance, **dictionary)
 
         return instance

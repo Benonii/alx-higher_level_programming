@@ -1,2 +1,5 @@
 -- This script creates a table called first_table in the current database of my MySQL server
-CREATE TABLE my_first_table (id INT, name VARCHAR(256));
+CREATE TABLE IF NOT EXISTS my_first_table (
+	id INT PRIMARY KEY,
+	name VARCHAR(256)
+);

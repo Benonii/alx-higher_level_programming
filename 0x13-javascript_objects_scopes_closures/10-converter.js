@@ -3,15 +3,10 @@
 exports.converter = function (base) {
   const symbols = '0123456789abcdef';
 
-  function convertToBase (number) {
-    if (number < base) {
-      return symbols[number];
-    } else {
-      const quotient = Math.floor(number / base);
-      const remainder = number % base;
-      return convertToBase(quotient) + symbols[remainder];
-    }
-  }
+  const convertToBase = number =>
+    number < base
+      ? symbols[number]
+      : convertToBase(Math.floor(number / base)) + symbols[number % base];
 
-  return (convertToBase);
+  return convertToBase;
 };

@@ -4,8 +4,8 @@ const argv = process.argv;
 const firstArg = argv[2];
 const x = Math.floor(Number(firstArg));
 
-if (firstArg) {
-  console.log('My number: ' + x);
+if (Number.isNaN(x)) {
+	console.log('Not a number');
 } else {
-  console.log('Not a number');
+	console.log('My number: ' + x);
 }

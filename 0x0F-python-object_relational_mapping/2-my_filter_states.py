@@ -18,8 +18,8 @@ if __name__ == "__main__":
                              host="localhost", port=3306)
 
         c = db.cursor()
-        c.execute("SELECT MIN(id) as id, name FROM states WHERE name = '{}'\
-                   ORDER BY id;".format(searched))
+        c.execute("SELECT MIN(id) id, name FROM states WHERE name = '{}'\
+                   GROUP BY name ORDER BY id;".format(searched))
 
         rows = c.fetchall()
 

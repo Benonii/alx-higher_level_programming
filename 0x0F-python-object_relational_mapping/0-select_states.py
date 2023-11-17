@@ -8,12 +8,24 @@ import sys
 
 if __name__ == "__main__":
     av = sys.argv
-    username = av[0]
-    password = av[1]
-    dbname = av[2]
+    username = av[1]
+    password = av[2]
+    dbname = av[3]
 
-    db = MySQLdb.connect(user=username, password=password, database=dbname,
-                         host="localhost", port=3306)
+    try:
+        db = MySQLdb.connect(user=username, password=password, database=dbname,
+                             host="localhost", port=3306)
 
-    c = db.cursor()
-    c.execute("""SELECT id, name FROM states ORDER BY id;""")
+        c = db.cursor()
+        c.execute("""SELECT id, name FROM states ORDER BY id;""")
+
+        rows = c.fetchall()
+
+        for row in rows:
+            print(row)
+
+    except MySQLdb.Error as e:
+        print("Error connecting to the database:", e)
+    finally:
+        if db:
+            db.close()

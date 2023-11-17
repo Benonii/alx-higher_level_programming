@@ -17,7 +17,7 @@ if __name__ == "__main__":
                              host="localhost", port=3306)
 
         c = db.cursor()
-        c.execute("""SELECT id, name FROM states WHERE name LIKE 'N%'\
+        c.execute("""SELECT DISTINCT id, name FROM states WHERE name LIKE 'N%'\
                      ORDER BY id;""")
 
         rows = c.fetchall()

@@ -19,4 +19,5 @@ if __name__ == "__main__":
 
     for row in result:
         session.delete(row)
-        session.commit()
+
+    session.commit()

@@ -18,7 +18,7 @@ if __name__ == "__main__":
                              host="localhost", port=3306)
 
         c = db.cursor()
-        c.execute("SELECT DISTINCT MIN(id), name FROM states WHERE name = %s\
+        c.execute("SELECT DISTINCT id, name FROM states WHERE name = %s\
                    ORDER BY id;", (searched,))
 
         rows = c.fetchall()

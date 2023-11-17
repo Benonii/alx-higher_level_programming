@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
         c = db.cursor()
         c.execute("SELECT MIN(id) as id, name FROM states WHERE name = '{}'\
-                     GROUP BY name ORDER BY id;".format(searched))
+                   ORDER BY id;".format(searched))
 
         rows = c.fetchall()
 

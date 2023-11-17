@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
     result = session.query(State).order_by(State.id).first()
 
-    if result is None:
+    if not result:
         print("Nothing")
     else:
         print(f"{result.id}: {result.name}")

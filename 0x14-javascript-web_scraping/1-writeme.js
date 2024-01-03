@@ -11,12 +11,3 @@ fs.writeFile(filename, content, 'utf-8', (err) => {
     process.exit(1);
   }
 });
-
-fs.readFile(filename, 'utf-8', (err, data) => {
-  if (err) {
-    console.log(err);
-    process.exit(1);
-  }
-
-  console.log(data);
-});

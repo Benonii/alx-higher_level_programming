@@ -16,6 +16,8 @@ const userTaskDict = {
   10: 0
 };
 
+const goodEmployees = {};
+
 request.get(url, (err, response, body) => {
   if (err) {
     console.log(err);
@@ -28,6 +30,12 @@ request.get(url, (err, response, body) => {
         userTaskDict[task.userId] += 1;
       }
     }
-    console.log(userTaskDict);
+
+    for (const id of Object.keys(userTaskDict)) {
+      if (userTaskDict[id] !== 0) {
+        goodEmployees[id] = userTaskDict[id];
+      }
+    }
+    console.log(goodEmployees);
   }
 });

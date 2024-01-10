@@ -1,5 +1,5 @@
-$(function() {
-	$('#update_header').on('click', function() {
-		$('header').text("New Header!!!")
-	});
+$(function () {
+  $('#update_header').on('click', function () {
+    $('header').text('New Header!!!');
+  });
 });
